@@ -26,7 +26,13 @@ class CssCompress
 		    header("Content-type: text/css");
 		    return "<style>".$buffer."</style>";
 		}else {
-		    return '<link rel="stylesheet" href="css/style.css">';
+
+			$filecss = "";
+			foreach ($cssFiles as $cssFile) 
+			{
+			  $filecss .= '<link rel="stylesheet" href="'.$cssFile.'">';
+			}
+		    return $filecss;
 		}
 
 
