@@ -1,0 +1,45 @@
+{
+    "name": "herokeyboard/csscompress",
+    "type": "library",
+    "description": "csscompress",
+    "version": "1.0.0",
+    "keywords": [
+    "herokeyboard",
+    "css",
+    "compress"
+    ],
+    "homepage": "https://github.com/herokeyboard/csscompress",
+    "license": "MIT",
+    "authors": [
+    {
+    	"name":"Herokeyboard",
+    	"email": "herokeyboard@github.com",
+        "homepage": "https://github.com/herokeyboard/csscompress",
+        "role": "Developer"
+    },
+        {
+        "name":"Herokeyboard",
+    	"email": "herokeyboard@github.com",
+        "homepage": "https://github.com/herokeyboard/csscompress",
+        "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "support": {
+        "issues": "https://github.com/herokeyboard/csscompress/issues",
+        "source": "https://github.com/herokeyboard/csscompress/releases"
+    },
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Herokeyboard\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
