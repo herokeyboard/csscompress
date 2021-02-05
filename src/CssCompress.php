@@ -21,7 +21,9 @@ class CssCompress
 		    {
 		   	 return $buffer;
 		    } 
-
+		    $buffer = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $buffer);
+		    $buffer = str_replace(': ', ':', $buffer);
+		    $buffer = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $buffer);
 		    if (strpos($buffer, 'calc(') !== false) {
 		        $buffer = preg_replace_callback('#(?<=[\s:])calc\(\s*(.*?)\s*\)#', function($matches) {
 		            return 'calc(' . preg_replace('#\s+#', "\x1A", $matches[1]) . ')';
